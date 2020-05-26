@@ -30,7 +30,7 @@ __=#  alter user user_name with password 'password';__
 ============================================================
 
 create empty table table: <br/>
-__=#  create table table_name __
+__=#  create table table_name__
 
 create table with argumrnts: <br/>
 __=#  create table table_name (
