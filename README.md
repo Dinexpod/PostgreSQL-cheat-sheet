@@ -67,5 +67,6 @@ PRIMARY KEY (attr6, attr7, ... )
 
 refferenses on another table attribute: <br/>
 __=#  create table table_name ( id integer REFERENCES another_table_name ( id ) );__
+
 __=#  create table table_name ( id integer REFERENCES another_table_name );__
 
