@@ -51,3 +51,21 @@ __=#  CREATE TABLE user (
 __=#  ALTER SEQUENCE user_id_seq OWNED BY user.user_id;__
 
 ============================================================
+
+constraint on attributes: <br/>
+__=#  create table table_name 
+(
+attr1 integer CHECK ( attr1 = 1 OR attr1 = 2 ),
+attr2 integer CHECK ( attr2 >= 3 AND attr2 <= 5 ),
+attr3 text NOT NULL,
+attr4 text CHECK (attr4 IS NOT NULL),
+attr5 integer UNIQUE,
+attr6 text PRIMARY KEY,
+CONSTRAINT uniq_mix UNIQUE ( attr1, attr2 ),
+PRIMARY KEY (attr6, attr7, ... )
+);__
+
+refferenses on another table attribute: <br/>
+__=#  create table table_name ( id integer REFERENCES another_table_name ( id ) );__
+__=#  create table table_name ( id integer REFERENCES another_table_name );__
+
