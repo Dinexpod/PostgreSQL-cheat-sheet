@@ -42,6 +42,9 @@ name text,
 age integer
 );__
 
+insert in table: <br/>
+__=# insert into contragents (name)  select 'Sam' from  generate_series(50001, 5000000);__
+
 ============================================================
 
 serial use instead of this: <br/>
