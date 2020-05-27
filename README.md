@@ -29,8 +29,11 @@ __=#  alter user user_name with password 'password';__
 
 ============================================================
 
-create empty table table: <br/>
+create empty table: <br/>
 __=#  create table table_name__
+
+delete table: <br/>
+__=#  drop table table_name__
 
 create table with argumrnts: <br/>
 __=#  create table table_name (
@@ -67,5 +70,7 @@ PRIMARY KEY (attr6, attr7, ... )<br/>
 
 refferenses on another table attribute: <br/>
 __=#  create table table_name ( id integer REFERENCES another_table_name ( id ) );__<br/>
-__=#  create table table_name ( id integer REFERENCES another_table_name );__
+__=#  create table table_name ( id integer REFERENCES another_table_name );__<br/>
+__=#  create table table_name ( id integer REFERENCES another_table_name ON DELETE CASCADE );__
+
 
