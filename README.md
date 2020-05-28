@@ -77,6 +77,7 @@ __=#  create table table_name ( id integer REFERENCES another_table_name );__<br
 __=#  create table table_name ( id integer REFERENCES another_table_name ON DELETE CASCADE );__
 
 ============================================================
+
 ALTER
 
 refferenses on another table attribute: <br/>
@@ -97,11 +98,11 @@ ELSE 3 END );__
 VIEW
 
 create view: 
-CREATE VIEW seats_by_fare_cond AS
-SELECT a.model,
-s.aircraft_code,
-s.fare_conditions,
-count( * ) AS num_seats
-FROM seats
-GROUP BY aircraft_code, fare_conditions
-ORDER BY aircraft_code, fare_conditions;
+__=# CREATE VIEW seats_by_fare_cond AS<br/>
+SELECT a.model,<br/>
+s.aircraft_code,<br/>
+s.fare_conditions,<br/>
+count( * ) AS num_seats<br/>
+FROM seats<br/>
+GROUP BY aircraft_code, fare_conditions<br/>
+ORDER BY aircraft_code, fare_conditions;__
