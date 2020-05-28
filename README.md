@@ -86,6 +86,8 @@ __=# ALTER TABLE users RENAME COLUMN mon TO mom;
 __=# ALTER TABLE table_name DROP COLUMN__ <br/>
 __=# ALTER TABLE table_name ADD CHECK (age < 40)__<br/>
 __=# ALTER TABLE table_name ADD CONSTRAIN__<br/>
+__=# ALTER TABLE aircrafts ALTER COLUMN speed SET NOT NULL;__<br/>
+__=# ALTER TABLE seats RENAME CONSTRAINT seats_fare_conditions_fkey TO seats_fare_conditions_code_fkey;__<br/>
 
 __=# ALTER TABLE seats<br/>
 ALTER COLUMN fare_conditions SET DATA TYPE integer<br/>
