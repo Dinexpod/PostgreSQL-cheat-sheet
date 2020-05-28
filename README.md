@@ -80,7 +80,7 @@ __=#  create table table_name ( id integer REFERENCES another_table_name ON DELE
 
 ALTER
 
-refferenses on another table attribute: <br/>
+ using ALTER: <br/>
 __=# ALTER TABLE table_name ADD COLUMN__<br/>
 __=# ALTER TABLE users RENAME COLUMN mon TO mom;
 __=# ALTER TABLE table_name DROP COLUMN__ <br/>
