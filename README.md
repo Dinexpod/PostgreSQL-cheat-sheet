@@ -45,6 +45,10 @@ age integer
 insert in table: <br/>
 __=# insert into contragents (name)  select 'Sam' from  generate_series(50001, 5000000);__
 
+update attribute value in table: <br/>
+__=# update friends set id = 2 where id = 1;
+
+
 ============================================================
 
 serial use instead of this: <br/>
