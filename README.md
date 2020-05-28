@@ -81,6 +81,7 @@ ALTER
 
 refferenses on another table attribute: <br/>
 __=# ALTER TABLE table_name ADD COLUMN__<br/>
+__=# ALTER TABLE users RENAME COLUMN mon TO mom;
 __=# ALTER TABLE table_name DROP COLUMN__ <br/>
 __=# ALTER TABLE table_name ADD CHECK__<br/>
 __=# ALTER TABLE table_name ADD CONSTRAIN__<br/>
@@ -90,3 +91,17 @@ ALTER COLUMN fare_conditions SET DATA TYPE integer<br/>
 USING ( CASE WHEN fare_conditions = 'Economy' THEN 1<br/>
 WHEN fare_conditions = 'Business' THEN 2<br/>
 ELSE 3 END );__
+
+============================================================
+
+VIEW
+
+create view: 
+CREATE VIEW seats_by_fare_cond AS
+SELECT a.model,
+s.aircraft_code,
+s.fare_conditions,
+count( * ) AS num_seats
+FROM seats
+GROUP BY aircraft_code, fare_conditions
+ORDER BY aircraft_code, fare_conditions;
