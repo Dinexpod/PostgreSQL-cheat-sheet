@@ -80,6 +80,13 @@ __=#  create table table_name ( id integer REFERENCES another_table_name ( id ) 
 __=#  create table table_name ( id integer REFERENCES another_table_name );__<br/>
 __=#  create table table_name ( id integer REFERENCES another_table_name ON DELETE CASCADE );__
 
+create empty table: <br/>
+__=# create table users (
+id serial primary key, 
+friend_id integer REFERENCES friends
+ON DELETE CASCADE 
+ON UPDATE CASCADE);
+
 ============================================================
 
 ALTER
