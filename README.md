@@ -76,4 +76,11 @@ __=#  create table table_name ( id integer REFERENCES another_table_name ( id ) 
 __=#  create table table_name ( id integer REFERENCES another_table_name );__<br/>
 __=#  create table table_name ( id integer REFERENCES another_table_name ON DELETE CASCADE );__
 
+============================================================
+ALTER
 
+refferenses on another table attribute: <br/>
+__=# ALTER TABLE table_name ADD COLUMN__
+__=# ALTER TABLE table_name DROP COLUMN__
+__=# ALTER TABLE table_name ADD CHECK__
+__=# ALTER TABLE table_name ADD CONSTRAIN__
