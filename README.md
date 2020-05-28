@@ -106,3 +106,6 @@ count( * ) AS num_seats<br/>
 FROM seats<br/>
 GROUP BY aircraft_code, fare_conditions<br/>
 ORDER BY aircraft_code, fare_conditions;__
+
+select from view: <br/>
+__=#  select * from view_name__
