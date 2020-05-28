@@ -108,4 +108,14 @@ GROUP BY aircraft_code, fare_conditions<br/>
 ORDER BY aircraft_code, fare_conditions;__
 
 select from view: <br/>
-__=#  select * from view_name__
+__=# select * from view_name;__
+
+create materialized view: <br/>
+__=# create materialized  view parents_by_user_m as <br/>
+select id, name, mom, dad from users <br/>
+group by id, name <br/>
+order by id, name;__
+
+refresh materialized view: <br/>
+__=# REFRESH MATERIALIZED VIEW view_name;__
+
