@@ -89,4 +89,4 @@ __=# ALTER TABLE seats<br/>
 ALTER COLUMN fare_conditions SET DATA TYPE integer<br/>
 USING ( CASE WHEN fare_conditions = 'Economy' THEN 1<br/>
 WHEN fare_conditions = 'Business' THEN 2<br/>
-EL__
+ELSE 3 END );__
