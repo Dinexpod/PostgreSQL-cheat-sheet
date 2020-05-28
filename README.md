@@ -84,7 +84,7 @@ refferenses on another table attribute: <br/>
 __=# ALTER TABLE table_name ADD COLUMN__<br/>
 __=# ALTER TABLE users RENAME COLUMN mon TO mom;
 __=# ALTER TABLE table_name DROP COLUMN__ <br/>
-__=# ALTER TABLE table_name ADD CHECK__<br/>
+__=# ALTER TABLE table_name ADD CHECK (age < 40)__<br/>
 __=# ALTER TABLE table_name ADD CONSTRAIN__<br/>
 
 __=# ALTER TABLE seats<br/>
@@ -119,3 +119,15 @@ order by id, name;__
 refresh materialized view: <br/>
 __=# REFRESH MATERIALIZED VIEW view_name;__
 
+===========================================================================
+
+SCHEMAS
+
+show schema: <br/>
+__=#  show search_path;__
+
+change schema: <br/>
+__=#  set search_path = schema_name;__
+
+show schema name: <br/>
+__=#  select current_schema;__
