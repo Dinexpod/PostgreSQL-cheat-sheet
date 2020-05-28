@@ -80,7 +80,13 @@ __=#  create table table_name ( id integer REFERENCES another_table_name ON DELE
 ALTER
 
 refferenses on another table attribute: <br/>
-__=# ALTER TABLE table_name ADD COLUMN__
-__=# ALTER TABLE table_name DROP COLUMN__
-__=# ALTER TABLE table_name ADD CHECK__
-__=# ALTER TABLE table_name ADD CONSTRAIN__
+__=# ALTER TABLE table_name ADD COLUMN__<br/>
+__=# ALTER TABLE table_name DROP COLUMN__ <br/>
+__=# ALTER TABLE table_name ADD CHECK__<br/>
+__=# ALTER TABLE table_name ADD CONSTRAIN__<br/>
+
+__=# ALTER TABLE seats<br/>
+ALTER COLUMN fare_conditions SET DATA TYPE integer<br/>
+USING ( CASE WHEN fare_conditions = 'Economy' THEN 1<br/>
+WHEN fare_conditions = 'Business' THEN 2<br/>
+EL__
