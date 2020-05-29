@@ -144,3 +144,35 @@ __=#  set search_path = schema_name;__
 
 show schema name: <br/>
 __=#  select current_schema;__
+
+===========================================================================
+
+QUERIES
+
+__=# SELECT * FROM aircrafts WHERE model LIKE 'Airbus';__
+__=# SELECT * FROM aircrafts WHERE model LIKE 'Airbus%';__
+__=# SELECT * FROM aircrafts WHERE model LIKE '%Airbus';__
+__=# SELECT * FROM aircrafts WHERE model LIKE '%Airbus%';__
+__=# SELECT * FROM aircrafts WHERE model NOT LIKE '%Airbus%';__
+__=# SELECT * FROM airports WHERE airport_name LIKE '___';__
+__=# SELECT * FROM aircrafts WHERE model ~ '^(A|Boe)';__
+__=# SELECT * FROM aircrafts WHERE model !~ '300$';__
+__=# SELECT * FROM aircrafts WHERE range BETWEEN 3000 AND 6000;__
+__=# SELECT model, range, range / 1.609 AS miles FROM aircrafts;__
+__=# SELECT model, range, round( range / 1.609, 2 ) AS miles FROM aircrafts;__
+__=# SELECT * FROM aircrafts ORDER BY range DESC;__
+__=# SELECT * FROM aircrafts ORDER BY range;__
+__=# SELECT * FROM aircrafts GROUP BY range;__
+__=# SELECT DISTINCT timezone FROM airports ORDER BY 1;__ // distinct - without duplicates
+__=# SELECT name, city, longitude FROM airports ORDER BY longitude DESC LIMIT 3 OFFSET 3;__ // offset - skip first 3
+__=# SELECT model, range, 
+CASE WHEN range < 2000 THEN 'Ближнемагистральный' WHEN range < 5000 THEN 'Среднемагистральный'
+ELSE 'Дальнемагистральный' END AS type FROM aircrafts ORDER BY model;__
+__=# __
+__=# __
+__=# __
+__=# __
+
+
+
+
