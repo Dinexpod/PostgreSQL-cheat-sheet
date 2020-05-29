@@ -170,8 +170,8 @@ CASE WHEN range < 2000 THEN 'Ближнемагистральный' <br/>
 WHEN range < 5000 THEN 'Среднемагистральный'<br/>
 ELSE 'Дальнемагистральный' <br/>
 END AS type FROM aircrafts ORDER BY model;__<br/>
-__=# __<br/>
-__=# __<br/>
+__=# SELECT count( * ) FROM airports a1 JOIN airports a2 ON a1.city <> a2.city;__<br/>
+__=# SELECT count( * ) FROM airports a1 CROSS JOIN__<br/>
 __=# __<br/>
 __=# __<br/>
 
