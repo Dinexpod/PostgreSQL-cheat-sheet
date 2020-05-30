@@ -175,6 +175,15 @@ __=# SELECT count( * ) FROM airports a1 CROSS JOIN__<br/>
 __=# __<br/>
 __=# __<br/>
 
+===========================================================================
 
+AGREGATION
 
+SELECT avg( total_amount ) FROM bookings;
+SELECT min( total_amount ) FROM bookings;
+SELECT max( total_amount ) FROM bookings;
 
+SELECT city, count( * )
+FROM airports
+GROUP BY city
+HAVING count( * ) > 1;
