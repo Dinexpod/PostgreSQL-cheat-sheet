@@ -187,3 +187,12 @@ SELECT city, count( * )
 FROM airports
 GROUP BY city
 HAVING count( * ) > 1;
+
+===========================================================================
+
+SUBQUERY
+
+SELECT count( * ) FROM bookings
+WHERE total_amount >
+( SELECT avg( total_amount ) FROM bookings );
+
