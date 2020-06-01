@@ -46,7 +46,10 @@ insert in table: <br/>
 __=# insert into contragents (name)  select 'Sam' from  generate_series(50001, 5000000);__
 
 update attribute value in table: <br/>
-__=# update friends set id = 2 where id = 1;
+__=# update friends set id = 2 where id = 1;__
+
+update attribute values in table: <br/>
+__=# update cd.facilities set membercost = 6, guestcost = 30 where name like 'Tennis Court%';__
 
 
 ============================================================
