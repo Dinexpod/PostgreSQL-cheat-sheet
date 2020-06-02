@@ -234,6 +234,10 @@ select facid, totalslots
 
 INDEXES
 
-show schema: <br/>
+CREATE INDEX: <br/>
 __CREATE INDEX имя-индекса
 ON имя-таблицы ( имя-столбца, ...);__
+
+CREATE INDEX: <br/>
+__CREATE INDEX
+ON airports ( airport_name );__
