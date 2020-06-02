@@ -45,6 +45,10 @@ age integer
 );__
 
 create TEMP table and copy data from enother table: <br/>
+__=#  CREATE TEMP TABLE aircrafts_tmp
+( LIKE aircrafts INCLUDING CONSTRAINTS INCLUDING INDEXES );__
+
+create TEMP table and copy data from enother table: <br/>
 __=#  CREATE TEMP TABLE aircrafts_tmp AS
 SELECT * FROM aircrafts WITH NO DATA;__
 
