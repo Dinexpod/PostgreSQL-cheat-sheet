@@ -207,3 +207,10 @@ SELECT count( * ) FROM bookings
 WHERE total_amount >
 ( SELECT avg( total_amount ) FROM bookings );
 
+with sum as (select facid, sum(slots) as totalslots
+	from cd.bookings
+	group by facid
+)
+select facid, totalslots 
+	from sum
+	where totalslots = (select max(totalslots) from sum);
