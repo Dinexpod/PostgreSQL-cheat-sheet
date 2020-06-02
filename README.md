@@ -2,6 +2,8 @@
 Query cheat-sheet about postgres and just sql
 
 ============================================================
+import postgres: <br/>
+__sudo -u postgres psql -d postgres -f "demo-big.sql"__
 
 install postgres: <br/>
 __~$ sudo apt-get update && sudo apt-get install postgresql-12__
