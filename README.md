@@ -44,6 +44,13 @@ name text,
 age integer
 );__
 
+copy table from file: <br/>
+__COPY aircrafts_tmp FROM '/home/postgres/aircrafts.txt';__
+
+copy table to file: <br/>
+__COPY aircrafts_tmp TO '/home/postgres/aircrafts_tmp.txt'
+WITH ( FORMAT csv );__
+
 create TEMP table and copy data from enother table: <br/>
 __=#  CREATE TEMP TABLE aircrafts_tmp
 ( LIKE aircrafts INCLUDING CONSTRAINTS INCLUDING INDEXES );__
