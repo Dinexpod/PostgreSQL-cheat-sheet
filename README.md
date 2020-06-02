@@ -229,3 +229,11 @@ with sum as (select facid, sum(slots) as totalslots
 select facid, totalslots 
 	from sum
 	where totalslots = (select max(totalslots) from sum);
+	
+===========================================================================
+
+INDEXES
+
+show schema: <br/>
+__CREATE INDEX имя-индекса
+ON имя-таблицы ( имя-столбца, ...);__
