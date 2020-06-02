@@ -44,6 +44,10 @@ name text,
 age integer
 );__
 
+create TEMP table and copy data from enother table: <br/>
+__=#  CREATE TEMP TABLE aircrafts_tmp AS
+SELECT * FROM aircrafts WITH NO DATA;__
+
 insert in table: <br/>
 __=# insert into contragents (name)  select 'Sam' from  generate_series(50001, 5000000);__
 
