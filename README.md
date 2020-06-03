@@ -241,3 +241,6 @@ ON имя-таблицы ( имя-столбца, ...);__
 CREATE INDEX: <br/>
 __CREATE INDEX
 ON airports ( airport_name );__
+
+DROP INDEX: <br/>
+__DROP INDEX имя-индекса;__
