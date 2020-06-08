@@ -23,7 +23,7 @@ __\q__ - exit from console
 create db: <br/>
 __=# create database db_name;__
 
-create db: <br/>
+create schema: <br/>
 __=# create schema test;__
 
 select current catalog: <br/>
