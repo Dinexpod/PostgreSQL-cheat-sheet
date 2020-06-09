@@ -247,3 +247,7 @@ ON airports ( airport_name );__
 
 DROP INDEX: <br/>
 __DROP INDEX имя-индекса;__
+
+===========================================================================
+
+explain analize select * from table;
